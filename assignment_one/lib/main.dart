@@ -18,8 +18,18 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Column(
             children: [
-              Text('Hello World!'),
-              RaisedButton(onPressed: null),
+              Text(
+                'Hello World!',
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              RaisedButton(
+                onPressed: null,
+                child: Text('Shuffle'),
+                textColor: Colors.blue,
+              ),
             ],
           ),
         ),
