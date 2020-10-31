@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-import './jokes.dart';
-import './control.dart';
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
