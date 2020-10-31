@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import './jokes.dart';
+import './control.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -62,7 +65,7 @@ class _MyAppState extends State<MyApp> {
               ),
               RaisedButton(
                 onPressed: _changeJoke,
-                child: Text('Shuffle'),
+                child: Text('Next'),
                 textColor: Colors.blue,
               ),
             ],
