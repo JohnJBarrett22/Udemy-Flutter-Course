@@ -1,20 +1,32 @@
 import 'package:flutter/material.dart';
 
-class Jokes extends StatelessWidget {
+import './text_output.dart';
+
+class TextControl extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _TextControlState();
+  }
+}
+
+class _TextControlState extends State<TextControl> {
+  String _mainText = 'Hello there, welcome to my App!';
+
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: [
-          Text(
-            'Moo!',
-            style: TextStyle(
-              fontSize: 16,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
+    return Column(
+      children: [
+        TextOutput(_mainText),
+        RaisedButton(
+          onPressed: () {
+            setState(() {
+              _mainText = 'This changed!';
+            });
+          },
+          child: Text('Change Text'),
+          textColor: Colors.blue,
+        ),
+      ],
     );
   }
 }
