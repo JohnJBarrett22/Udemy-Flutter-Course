@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import './widgets/new_transaction.dart';
-import './widgets/transaction_list.dart';
 import './widgets/user_transactions.dart';
 
 void main() => runApp(MyApp());
@@ -23,7 +21,8 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Finance Tracker'),
       ),
-      body: Column(
+      body: SingleChildScrollView(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
@@ -34,7 +33,9 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             UserTransactions(),
-          ]),
+          ],
+        ),
+      ),
     );
   }
 }
